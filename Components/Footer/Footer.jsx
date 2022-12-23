@@ -18,13 +18,16 @@ function Footer() {
   return (
     <Container sx={{ height: "100%" }}>
       <Grid container>
-        <Grid item xs={6}>
+        <Grid item xs={6} sm={4}>
           <Box sx={{ height: "100%", paddingBlock: "0.5rem", width: "100%" }}>
             <Stack
               direction="row"
-              justifyContent="center"
               alignItems="center"
-              sx={{ background: "", height: "100%" }}
+              sx={{
+                background: "",
+                height: "100%",
+                justifyContent: { xs: "center", sm: "start" },
+              }}
             >
               <IconButton
                 alt="LinkdIn"
@@ -68,7 +71,7 @@ function Footer() {
             </Stack>
           </Box>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={6} sm={4}>
           <Stack
             justifyContent="center"
             alignItems="center"
@@ -79,13 +82,13 @@ function Footer() {
             </Typography>
           </Stack>
         </Grid>
-        <Grid item sx={{ height: "", background: "", width: "100%" }}>
+        <Grid item sm={4} sx={{ height: "", background: "", width: "100%" }}>
           <Divider my={2} />
           <Box sx={{ height: "100%", paddingBlock: "0.5rem", width: "100%" }}>
             <Typography
               xs={12}
               variant="body1"
-              sx={{ opacity: 0.6, textAlign: "center" }}
+              sx={{ opacity: 0.6, textAlign: { xs: "center", sm: "right" } }}
             >
               All Rights Reserved ©2022
             </Typography>

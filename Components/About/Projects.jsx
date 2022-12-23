@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import Project from "../Projects/Project";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import data from "../data";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -33,10 +34,9 @@ function Projects() {
   }, []);
   return (
     <div ref={projectRef}>
-      <Project />
-      <Project />
-      <Project />
-      <Project />
+      {data.map(({ img, project }) => (
+        <Project key={img} img={img} project={project} />
+      ))}
     </div>
   );
 }

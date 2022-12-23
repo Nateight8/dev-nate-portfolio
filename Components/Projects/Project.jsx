@@ -1,7 +1,8 @@
 import { Box, Grid, Stack, Typography } from "@mui/material";
+import Image from "next/image";
 import React from "react";
 
-function Project({ dataBg, dataTxt }) {
+function Project({ dataBg, dataTxt, img, project }) {
   return (
     <Grid
       className="project"
@@ -19,15 +20,23 @@ function Project({ dataBg, dataTxt }) {
         <Box
           sx={{
             height: "20rem",
-            background: "#222d3d",
             width: "100%",
+            position: "relative",
           }}
         >
-          pics
+          <Image
+            src={img}
+            alt=""
+            fill
+            style={{
+              objectFit: "contain",
+              objectPosition: "center top",
+            }}
+          />
         </Box>
         <Box sx={{ color: "white", marginY: "1rem" }}>
           <Typography variant="h3" sx={{ marginY: "0.5rem", fontSize: "32px" }}>
-            Weather App
+            {project}
           </Typography>
           <Typography variant="body1" sx={{ opacity: 0.5, fontWeight: 400 }}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
