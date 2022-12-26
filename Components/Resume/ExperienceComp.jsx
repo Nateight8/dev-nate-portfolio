@@ -34,9 +34,9 @@ function ExperienceComp() {
           variant="body1"
           sx={{ opacity: 0.6, fontWeight: 300 }}
         >
-          Building and maintaining web applications using the React JavaScript
-          library. Implementing user interfaces, as well as creating reusable
-          components and integrating with APIs and back-end services.
+          Building and maintaining web applications using the React.
+          Implementing user interfaces, as well as creating reusable components
+          and integrating with APIs and back-end services.
         </Typography>
         <List
           sx={{

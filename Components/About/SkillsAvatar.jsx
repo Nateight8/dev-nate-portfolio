@@ -1,9 +1,10 @@
 import { Avatar, Box, IconButton } from "@mui/material";
 import React from "react";
 
-function SkillsAvatar({ icon }) {
+function SkillsAvatar({ icon, link }) {
   return (
     <IconButton
+      href={link}
       alt="LinkdIn"
       src="/static/images/avatar/1.jpg"
       sx={{

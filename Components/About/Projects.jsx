@@ -34,8 +34,13 @@ function Projects() {
   }, []);
   return (
     <div ref={projectRef}>
-      {data.map(({ img, project, id }) => (
-        <Project key={id} img={img} project={project} />
+      {data.map(({ img, project, id, description }) => (
+        <Project
+          key={id}
+          img={img}
+          project={project}
+          description={description}
+        />
       ))}
     </div>
   );

@@ -96,7 +96,7 @@ function Contact() {
 
         <Formik
           initialValues={{ name: "", email: "", phone: "", message: "" }}
-          onSubmit={(values) => console.log(values)}
+          onSubmit={(values, onSubmitProps) => onSubmitProps.resetForm()}
           validationSchema={validationSchema}
         >
           {({

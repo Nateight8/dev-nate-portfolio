@@ -110,8 +110,14 @@ function About() {
               sx={{ width: "100%", background: "", height: "0100%" }}
             >
               <SkillsAvatar icon={<TwitterIcon />} />
-              <SkillsAvatar icon={<GitHubIcon />} />
-              <SkillsAvatar icon={<LinkedInIcon />} />
+              <SkillsAvatar
+                link="https://github.com/Nateight8"
+                icon={<GitHubIcon />}
+              />
+              <SkillsAvatar
+                link="https://www.linkedin.com/in/mbaocha-jonathan-7463b7256"
+                icon={<LinkedInIcon />}
+              />
             </Stack>
           </Grid>
         </Grid>

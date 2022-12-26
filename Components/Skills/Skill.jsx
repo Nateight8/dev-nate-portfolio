@@ -20,7 +20,14 @@ function Skill({ logo }) {
             position: "relative",
           }}
         >
-          <Image src={logo} alt="" fill />
+          <Image
+            src={logo}
+            alt={logo}
+            fill
+            // sizes="(max-width: 768px) 100vw,
+            //   (max-width: 1200px) 50vw,
+            //   33vw"
+          />
         </Box>
       </Paper>
     </Grid>

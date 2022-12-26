@@ -2,7 +2,7 @@ import { Box, Grid, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 
-function Project({ dataBg, dataTxt, img, project }) {
+function Project({ dataBg, dataTxt, img, project, description }) {
   return (
     <Grid
       className="project"
@@ -26,7 +26,7 @@ function Project({ dataBg, dataTxt, img, project }) {
         >
           <Image
             src={img}
-            alt={img}
+            alt={project}
             fill
             priority="high"
             style={{
@@ -40,10 +40,7 @@ function Project({ dataBg, dataTxt, img, project }) {
             {project}
           </Typography>
           <Typography variant="body1" sx={{ opacity: 0.5, fontWeight: 400 }}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
-            quisquam repellendus esse maxime optio, tempora laudantium maiores
-            molestias quis expedita, accusantium porro quibusdam architecto iure
-            obcaecati, incidunt laboriosam molestiae suscipit.
+            {description}
           </Typography>
         </Box>
       </Stack>
