@@ -28,6 +28,7 @@ function Project({ dataBg, dataTxt, img, project }) {
             src={img}
             alt=""
             fill
+            priority="high"
             style={{
               objectFit: "contain",
               objectPosition: "center top",
