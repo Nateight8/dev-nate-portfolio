@@ -26,7 +26,7 @@ function Project({ dataBg, dataTxt, img, project }) {
         >
           <Image
             src={img}
-            alt=""
+            alt={img}
             fill
             priority="high"
             style={{

@@ -28,7 +28,7 @@ export default function Home() {
         <About />
       </main>
       <footer
-        style={{ background: "#222d3d", height: "", color: "whitesmoke" }}
+      // style={{ background: "#222d3d", height: "", color: "whitesmoke" }}
       >
         <Footer />
       </footer>

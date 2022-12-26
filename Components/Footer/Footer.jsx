@@ -16,7 +16,7 @@ import { GifBoxRounded } from "@mui/icons-material";
 
 function Footer() {
   return (
-    <Container sx={{ height: "100%" }}>
+    <Container sx={{ height: "100%", background: "#222d3d", color: "white" }}>
       <Grid container>
         <Grid item xs={6} sm={4}>
           <Box sx={{ height: "100%", paddingBlock: "0.5rem", width: "100%" }}>
