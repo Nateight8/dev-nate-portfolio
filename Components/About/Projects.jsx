@@ -3,6 +3,7 @@ import Project from "../Projects/Project";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import data from "../data";
+import { Grid } from "@mui/material";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -33,7 +34,7 @@ function Projects() {
     return () => ctx.revert();
   }, []);
   return (
-    <div ref={projectRef}>
+    <Grid container sx={{ width: "100%" }}>
       {data.map(({ img, project, id, description }) => (
         <Project
           key={id}
@@ -42,7 +43,7 @@ function Projects() {
           description={description}
         />
       ))}
-    </div>
+    </Grid>
   );
 }
 

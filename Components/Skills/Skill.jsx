@@ -4,11 +4,11 @@ import React from "react";
 
 function Skill({ logo }) {
   return (
-    <Grid item xs={12} sm={6} md={4} lg={3} sx={{ padding: "0.5rem" }}>
+    <Grid item xs={12} sm={4} md={3} lg={2} sx={{ padding: "0.5rem" }}>
       <Paper
         sx={{
           width: "100%",
-          height: "17rem",
+          height: "10rem",
           background: "#222d3d",
           padding: "1.5rem",
         }}
@@ -20,14 +20,7 @@ function Skill({ logo }) {
             position: "relative",
           }}
         >
-          <Image
-            src={logo}
-            alt={logo}
-            fill
-            // sizes="(max-width: 768px) 100vw,
-            //   (max-width: 1200px) 50vw,
-            //   33vw"
-          />
+          <Image src={logo} alt={logo} fill />
         </Box>
       </Paper>
     </Grid>

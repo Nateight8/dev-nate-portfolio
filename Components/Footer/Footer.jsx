@@ -51,7 +51,7 @@ function Footer() {
                   <TwitterIcon />
                 </IconButton>
                 <IconButton
-                  alt="LinkdIn"
+                  alt="Github"
                   src="/static/images/avatar/1.jpg"
                   sx={{
                     backgroundColor: "#0b85c9",
