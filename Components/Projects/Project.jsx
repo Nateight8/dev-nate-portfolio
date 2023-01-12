@@ -11,7 +11,7 @@ import {
 import Image from "next/image";
 import React from "react";
 
-function Project({ dataBg, dataTxt, img, project, description }) {
+function Project({ dataBg, dataTxt, img, project, git, url }) {
   const sides = {
     position: "absolute",
     width: "100%",
@@ -107,6 +107,8 @@ function Project({ dataBg, dataTxt, img, project, description }) {
                   aria-label="options"
                 >
                   <Button
+                    href={git}
+                    // disabled={true}
                     sx={{
                       textTransform: "capitalize",
                       fontWeight: 300,
@@ -116,6 +118,7 @@ function Project({ dataBg, dataTxt, img, project, description }) {
                     Git Repo
                   </Button>
                   <Button
+                    href={url}
                     sx={{
                       textTransform: "capitalize",
                       fontWeight: 300,

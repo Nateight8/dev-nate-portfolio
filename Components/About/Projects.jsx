@@ -35,13 +35,8 @@ function Projects() {
   }, []);
   return (
     <Grid container sx={{ width: "100%", paddingY: "1rem" }}>
-      {data.map(({ img, project, id, description }) => (
-        <Project
-          key={id}
-          img={img}
-          project={project}
-          description={description}
-        />
+      {data.map(({ img, project, id, git, url }) => (
+        <Project key={id} img={img} project={project} git={git} url={url} />
       ))}
     </Grid>
   );
