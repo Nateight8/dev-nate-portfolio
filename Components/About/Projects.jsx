@@ -34,7 +34,7 @@ function Projects() {
     return () => ctx.revert();
   }, []);
   return (
-    <Grid container sx={{ width: "100%" }}>
+    <Grid container sx={{ width: "100%", paddingY: "1rem" }}>
       {data.map(({ img, project, id, description }) => (
         <Project
           key={id}

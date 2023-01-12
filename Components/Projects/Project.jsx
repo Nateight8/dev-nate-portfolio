@@ -1,86 +1,135 @@
-import { Box, Grid, IconButton, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Grid,
+  IconButton,
+  Stack,
+  Typography,
+  ButtonGroup,
+  Chip,
+} from "@mui/material";
 import Image from "next/image";
 import React from "react";
-import GitHubIcon from "@mui/icons-material/GitHub";
 
 function Project({ dataBg, dataTxt, img, project, description }) {
+  const sides = {
+    position: "absolute",
+    width: "100%",
+    height: "100%",
+    backfaceVisibility: "hidden",
+    background: "#222d3d",
+    borderRadius: "0.5rem",
+  };
+
   return (
     <Grid
       item
       xs={12}
       sm={6}
-      lg={4}
+      md={4}
       className="project"
-      // data-bgcolor={dataBg}
-      // data-text={dataTxt}
-      sx={{ padding: "1rem", marginY: "2rem" }}
+      sx={{ paddingY: "0.5rem", paddingX: { sm: "0.5rem" } }}
     >
-      <Stack
-        justifyContent="center"
-        // alignItems="center"
-        // sx={{ paddingBlock: "1rem", }}
+      <Box
+        // mainContainer
+        sx={{
+          position: "Relative",
+          height: "15rem",
+          width: "100%",
+        }}
       >
         <Box
+          // card
           sx={{
-            height: "15rem",
+            position: "absolute",
+            height: "100%",
             width: "100%",
-            position: "relative",
+
+            transformStyle: "preserve-3d",
+            transition: "all 0.5s ease-in",
+            transitionDelay: "0.5s",
+            "&:hover": {
+              transform: "rotateY(-180deg)",
+              transition: "all 0.5s ease-out",
+            },
           }}
         >
-          <Image
-            src={img}
-            alt={project}
-            fill
-            priority="high"
-            style={{
-              objectFit: "cover",
-              objectPosition: "center top",
+          <Box
+            // front
+            sx={{
+              ...sides,
             }}
-          />
+          >
+            <Box
+              sx={{
+                height: "15rem",
+                width: "100%",
+                position: "relative",
+
+                padding: "0.5rem",
+              }}
+            >
+              <Image
+                src={img}
+                alt={project}
+                fill
+                priority="high"
+                style={{
+                  objectFit: "cover",
+                  objectPosition: "center top",
+                  borderRadius: "0.2rem",
+                }}
+              />
+            </Box>
+          </Box>
+          <Box
+            // back
+            sx={{
+              ...sides,
+              transform: "rotateY(180deg)",
+              color: "white",
+              padding: "1rem",
+            }}
+          >
+            <Stack
+              justifyContent="center"
+              alignItems="center"
+              sx={{ width: "100%", height: "100%" }}
+            >
+              <Typography variant="h5" sx={{ fontSize: "1.24rem" }}>
+                {project}
+              </Typography>
+
+              <Box sx={{ paddingY: "0.8rem" }}>
+                <ButtonGroup
+                  variant="contained"
+                  color="primary"
+                  aria-label="options"
+                >
+                  <Button
+                    sx={{
+                      textTransform: "capitalize",
+                      fontWeight: 300,
+                      letterSpacing: 1.6,
+                    }}
+                  >
+                    Git Repo
+                  </Button>
+                  <Button
+                    sx={{
+                      textTransform: "capitalize",
+                      fontWeight: 300,
+                      letterSpacing: 1.6,
+                    }}
+                  >
+                    Visit site
+                  </Button>
+                </ButtonGroup>
+              </Box>
+            </Stack>
+          </Box>
         </Box>
-        <Stack
-          direction="row"
-          justifyContent="space-between"
-          alignItems="center"
-        >
-          <Box sx={{ color: "white", paddingY: "1rem" }}>
-            <Typography variant="h3" sx={{ fontSize: "18px" }}>
-              {project}
-            </Typography>
-            <Typography variant="body" sx={{ opacity: 0.6, fontWeight: 300 }}>
-              Web Dev
-            </Typography>
-          </Box>
-          <Box>
-            <IconButton
-              alt="Github"
-              src="/static/images/avatar/1.jpg"
-              sx={{
-                backgroundColor: "#0b85c9",
-                marginLeft: { sm: "1rem" },
-                marginRight: { xs: "1rem", sm: 0 },
-                background: "#222d3d",
-                color: "rgba(232,232,233, 0.5)",
-              }}
-            >
-              <GitHubIcon />
-            </IconButton>
-            <IconButton
-              alt="Github"
-              src="/static/images/avatar/1.jpg"
-              sx={{
-                backgroundColor: "#0b85c9",
-                // marginLeft: { sm: "1rem" },
-                // marginRight: { xs: "1rem", sm: 0 },
-                background: "#222d3d",
-                color: "rgba(232,232,233, 0.5)",
-              }}
-            >
-              <GitHubIcon />
-            </IconButton>
-          </Box>
-        </Stack>
-      </Stack>
+      </Box>
     </Grid>
   );
 }
