@@ -28,7 +28,7 @@ function Project({ dataBg, dataTxt, img, project, git, url }) {
       sm={6}
       md={4}
       className="project"
-      sx={{ paddingY: "0.5rem", paddingX: { sm: "0.5rem" } }}
+      sx={{ paddingY: "1rem", paddingX: { sm: "0.5rem" } }}
     >
       <Box
         // mainContainer

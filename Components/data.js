@@ -26,6 +26,15 @@ const data = [
     // description:
     // "The IP Tracker is a frontendmentor challenge in which I used two separate APIs(IP Geolocation API by IPify and  LeafletJS) together to create an IP Address Tracking app.",
   },
+  {
+    id: "4",
+    img: "/images/connect.png",
+    project: "E-Commerce Shopping Experience",
+    git: "https://github.com/Nateight8/connect-decor-ecommerce",
+    url: "https://connect-interior.vercel.app/",
+    // description:
+    // "The IP Tracker is a frontendmentor challenge in which I used two separate APIs(IP Geolocation API by IPify and  LeafletJS) together to create an IP Address Tracking app.",
+  },
 ];
 
 export default data;
